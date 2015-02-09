@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+  "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+  "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+
+	<!-- ===================  公共基础布局  ===================== -->
+	<definition name="myapp.baselayout" template="/WEB-INF/layouts/base.jsp">
+		<put-attribute name="title" value="xx公司实验台预约系统" />
+		<put-attribute name="bodyBackground" value="/WEB-INF/images/bodyBackground.jpg"/>
+		<put-attribute name="header" value="/WEB-INF/layouts/header.jsp" />
+<!-- 		<put-attribute name="menu" value="/WEB-INF/layouts/menu.jsp" /> -->
+		<put-attribute name="body" value="/WEB-INF/layouts/body.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/layouts/footer.jsp" />
+	</definition>
+	
+	
+<!-- 	<definition name="HomePage" extends="baselayouts">
+	<put-attribute name="body" value="#"></put-attribute>
+	</definition> -->
+	
+	<!-- ===================  首页查询布局  ===================== -->
+	<definition name="myapp.chaxun" extends="myapp.baselayout">
+	<put-attribute name="body" value="/WEB-INF/pages/core/chaxun.jsp"></put-attribute>
+	</definition>
+	
+	
+</tiles-definitions>

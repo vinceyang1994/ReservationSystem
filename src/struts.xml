@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<!-- <constant name="struts.action.extension" value="action" /> -->
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.serve.static.browserCache" value="false" />
+	<!-- 配置Convention插件自动重加载映射 -->
+
+	<constant name="struts.convention.classes.reload" value="true" />
+	<constant name="struts.convention.result.path" value="/WEB-INF/pages/" />
+	<!-- 总的struts入口 -->
+	<!-- <include file="xx.xml" /> -->
+	<package name="default" namespace="/" extends="tiles-default">
+
+		<result-types>
+			<result-type name="tiles"
+				class="org.apache.struts2.views.tiles.TilesResult" default="true" />
+		</result-types>
+		
+		<action name="cha-xun" class="com.vince.action.ChaXunAction">
+           <result name="success" type="tiles">myapp.chaxun</result>
+        </action>
+	</package>
+
+</struts>
